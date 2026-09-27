@@ -58,7 +58,7 @@ Strong class imbalance (car 144k instances vs bus 4.6k) — handled through stra
 
 ```
 src/track_video.py               YOLO + DeepSORT video tracking (4+1 detect/predict cycle)
-src/plot_ap_by_class_and_size.py AP analysis figure
+src/plot_ap_by_class_and_size.py Evaluation figures (AP by class/size, class balance)
 results/                         Evaluation figures
 ```
 
