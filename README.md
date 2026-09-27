@@ -47,7 +47,7 @@ Strong class imbalance (car 144k instances vs bus 4.6k) — handled through stra
 2. **Experiment 1** — first fine-tuning run: good early peak (mAP@0.5 0.679) but numerically unstable, so discarded.
 3. **Experiment 2 (final)** — full fine-tuning of YOLO11s · 960 px · AdamW · cosine LR (lr0 = 8e-4) · moderated mosaic (0.5) · early stopping · 218 epochs.
 4. **Experiment 3** — first 12 layers frozen (`freeze=12`) → worse than Exp. 2: freezing limited adaptation to the driving domain.
-5. **Tracking** — DeepSORT on top of the detector with a **4 + 1 cycle**: YOLO runs on 4 consecutive frames and the Kalman filter predicts the 5th, reducing detector calls by 20% while keeping every output frame. Confidence threshold 0.35, chosen from the F1-confidence curve (max F1 ≈ 0.33).
+5. **Tracking** — DeepSORT on top of the detector with a **4 + 1 cycle**: YOLO runs on 4 consecutive frames and the Kalman filter predicts the 5th, reducing detector calls by 20% while keeping every output frame. Confidence threshold 0.35, chosen from the F1-confidence curve (F1 peaks at a confidence of ≈ 0.33).
 
 <p align="center">
   <img src="results/pr_curve.png" width="48%" alt="Precision-recall curve">
